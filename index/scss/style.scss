@@ -1,0 +1,137 @@
+@import "../../general/mixin.scss";
+
+body{
+    background-color: #F0F0F0;
+}
+
+.wrapper{
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.center{
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-header{
+    background-color: #FFFFFF;
+
+    header{
+        padding-top: 23px;
+        padding-bottom: 29px;
+        display: grid;
+        grid-template-columns: 80px 220px auto;
+        column-gap: 30px;
+
+        .catalog{
+            .btn-city-search{
+                font-family: 'Gotham Pro';
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 143%;
+                color: #222;
+                background-color: #FFFFFF;
+                padding: 0px;
+                border: none;
+                &::after {
+                    content: url(../img/arrow.png);
+                    margin-left: 8px;
+                }
+                
+            }
+            
+            .btn-catalog-search{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0px;
+                border-radius: 4px;
+                width: 220px;
+                height: 50px;
+                background-color: #1c69d4;
+                border: none;
+                margin-top: 18px;
+                font-family: 'Gotham Pro';
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 144%;
+                color: #fff;
+                &::before{
+                    // content: url(../img/burger.png);
+                    // margin-right: 17px;
+                    // vertical-align: middle;
+                    content: ""; /* обязательно */
+                    display: inline-block; /* или block */
+                    width: 22px;   /* реальные размеры иконки */
+                    height: 23px;
+                    margin-right: 17px;
+                    background: url("../img/burger.png") no-repeat center / contain;
+                }
+            }
+        }
+
+        .navigation{
+            .navigation-top{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 17px;
+                
+                .navigation-top-right{
+                    display: flex;
+
+                    .number{
+                        font-family: 'Gotham Pro';
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 109%;
+                        color: #222;
+                        margin-right: 36px;
+                    }
+
+                    .navigation-pannel{
+
+                        a{
+                            font-family: 'Gotham Pro';
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 131%;
+                            color: #222;
+                            text-decoration: none;
+                            margin-right: 40px;
+                            &:first-of-type{
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+
+                .navigation-top-left{
+                    display: flex;
+                    button{
+                        padding: 0px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                        background-color: #FFFFFF;
+                        span{
+                            font-family: 'Gotham Pro';
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 140%;
+                            color: #222;
+                            margin-left: 8px;
+                        }
+                        &:last-of-type{
+                            margin-left: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
