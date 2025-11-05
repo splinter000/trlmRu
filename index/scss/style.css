@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   background-color: #F0F0F0;
 }
@@ -35,6 +34,7 @@ body {
   background-color: #FFFFFF;
   padding: 0px;
   border: none;
+  cursor: pointer;
 }
 .container-header header .catalog .btn-city-search::after {
   content: url(../img/arrow.png);
@@ -56,11 +56,12 @@ body {
   font-size: 16px;
   line-height: 144%;
   color: #fff;
+  cursor: pointer;
 }
 .container-header header .catalog .btn-catalog-search::before {
-  content: ""; /* обязательно */
-  display: inline-block; /* или block */
-  width: 22px; /* реальные размеры иконки */
+  content: "";
+  display: inline-block;
+  width: 22px;
   height: 23px;
   margin-right: 17px;
   background: url("../img/burger.png") no-repeat center/contain;
@@ -103,6 +104,7 @@ body {
   justify-content: center;
   border: none;
   background-color: #FFFFFF;
+  cursor: pointer;
 }
 .container-header header .navigation .navigation-top .navigation-top-left button span {
   font-family: "Gotham Pro";
@@ -114,4 +116,67 @@ body {
 }
 .container-header header .navigation .navigation-top .navigation-top-left button:last-of-type {
   margin-left: 24px;
+}
+.container-header header .navigation .navigation-bottom .navigation-search {
+  position: relative;
+  z-index: 10;
+}
+.container-header header .navigation .navigation-bottom .navigation-search:focus-within .search-btn {
+  display: inline-block;
+}
+.container-header header .navigation .navigation-bottom .navigation-search:focus-within input {
+  outline: none;
+  background-color: #fff;
+}
+.container-header header .navigation .navigation-bottom .navigation-search input {
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  width: 100%;
+  height: 50px;
+  padding-left: 49px;
+  background: url(../img/search.png) no-repeat 20px center;
+}
+.container-header header .navigation .navigation-bottom .navigation-search input::-moz-placeholder {
+  font-family: "Gotham Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #999;
+}
+.container-header header .navigation .navigation-bottom .navigation-search input::placeholder {
+  font-family: "Gotham Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #999;
+}
+.container-header header .navigation .navigation-bottom .navigation-search .search-btn {
+  display: none;
+  position: absolute;
+  right: 0;
+  border-radius: 4px;
+  width: 237px;
+  height: 50px;
+  background-color: #1c69d4;
+  border: none;
+  font-family: "Gotham Pro";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 144%;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+.container-header header .navigation .navigation-bottom .search-overlay {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  transition: opacity 0.5s;
+}
+.container-header header .navigation .navigation-bottom .navigation-search:focus-within ~ .search-overlay {
+  opacity: 1;
+  pointer-events: auto;
 }/*# sourceMappingURL=style.css.map */
